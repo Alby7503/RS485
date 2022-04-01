@@ -10,9 +10,9 @@ void loop()
 { 
   
   if (Serial.available()) {
-    char a = Serial.read();
-    Serial.print(a);
-    if(a == 'a') 
+    String msg = Serial.readString();
+    Serial.println(msg);
+    if(msg == "test") 
     {
       tone(6, 1000, 300);
     }
